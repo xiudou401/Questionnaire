@@ -34,7 +34,7 @@ const QuestionCard: FC<PropsType> = (props: PropsType) => {
       <div className={styles['button-container']}>
         <div className={styles.left}>
           <button>Edit QuestionList</button>
-          <button>Data</button>
+          <button>Stats</button>
         </div>
         <div className={styles.right}>
           <button>Star</button>

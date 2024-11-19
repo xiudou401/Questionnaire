@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 const Trash: FC = () => {
-  return <div></div>;
+  return <div>Trash</div>;
 };
 
 export default Trash;

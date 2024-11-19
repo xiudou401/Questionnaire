@@ -1,7 +1,22 @@
 import React, { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login: FC = () => {
-  return <div>Login</div>;
+  const nav = useNavigate();
+  return (
+    <div>
+      <p>Login</p>
+      <div>
+        <button
+          onClick={() => {
+            nav(-1);
+          }}
+        >
+          Go back
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default Login;

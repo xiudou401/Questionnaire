@@ -70,7 +70,7 @@ const Trash: FC = () => {
     confirm({
       title: 'Are you sure to delete it',
       icon: <ExclamationCircleOutlined />,
-      content: 'You can get it back again once it is deleted',
+      content: 'You cannot get it back again once it is deleted',
       onOk: () => alert(JSON.stringify(selectedIds)),
     });
   };

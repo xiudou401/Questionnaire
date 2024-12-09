@@ -91,7 +91,7 @@ const QuestionCard: FC<PropsType> = (props: PropsType) => {
         <div className={styles.right}>
           <Space>
             <Button type="text" size="small" icon={<StarOutlined />}>
-              {isStar ? 'Not Star' : 'Star'}
+              {isStar ? 'Star' : 'Not Star'}
             </Button>
             <Popconfirm
               title="Are you sure to copy this?"

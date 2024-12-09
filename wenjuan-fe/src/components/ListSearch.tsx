@@ -16,6 +16,7 @@ const ListSearch: FC = () => {
     const curVal = searchParams.get(LIST_SEARCH_PARAM_KEY) || '';
     setValue(curVal);
   }, [searchParams]);
+
   const handleSearch = (value: string) => {
     nav({
       pathname,

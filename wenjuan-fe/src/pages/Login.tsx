@@ -52,7 +52,7 @@ const Login: FC = () => {
           <Title level={2}>
             <UserOutlined />
           </Title>
-          <Title level={2}>Create your account</Title>
+          <Title level={2}>Login</Title>
         </Space>
       </div>
       <div>

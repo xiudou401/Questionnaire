@@ -27,7 +27,10 @@ const Home: FC = () => {
   //     .then((res) => console.log('axios res data', res.data));
   // }, []);
 
+
   useEffect(() => {}, []);
+
+
   return (
     <div className={styles.container}>
       <div className={styles.info}>

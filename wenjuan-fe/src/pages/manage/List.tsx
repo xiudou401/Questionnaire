@@ -1,6 +1,13 @@
 import React, { FC, useState } from 'react';
+// import { useSearchParams } from 'react-router-dom';
+import { Typography } from 'antd';
+import { useTitle } from 'ahooks';
+
 import QuestionCard from '../../components/QuestionCard';
-import styles from './List.module.scss';
+import ListSearch from '../../components/ListSearch';
+import styles from './common.module.scss';
+
+const { Title } = Typography;
 
 const rawQuestionList = [
   {
@@ -37,22 +44,28 @@ const rawQuestionList = [
   },
 ];
 const List: FC = () => {
+  useTitle("Eason's Questionnare - My Questionnaire");
+  // const [searchParams] = useSearchParams();
+  // console.log('keyword', searchParams.get('keyword'));
   const [questionList, setQuestionList] = useState(rawQuestionList);
   return (
     <div>
       <div className={styles.header}>
         <div className={styles.left}>
-          <h3>my question list</h3>
+          <Title level={3}>my question list</Title>
         </div>
-        <div className={styles.right}>search</div>
+        <div className={styles.right}>
+          <ListSearch />
+        </div>
       </div>
       <div className={styles.content}>
-        {questionList.map((q) => {
-          const { _id } = q;
-          return <QuestionCard key={_id} {...q} />;
-        })}
+        {questionList.length > 0 &&
+          questionList.map((q) => {
+            const { _id } = q;
+            return <QuestionCard key={_id} {...q} />;
+          })}
       </div>
-      <div className={styles.footer}>list page footer</div>
+      <div className={styles.footer}>Load More ...</div>
     </div>
   );
 };

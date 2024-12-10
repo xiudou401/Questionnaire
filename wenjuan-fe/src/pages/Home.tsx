@@ -27,9 +27,11 @@ const Home: FC = () => {
   //     .then((res) => console.log('axios res data', res.data));
   // }, []);
 
-
-  useEffect(() => {}, []);
-
+  useEffect(() => {
+    fetch('/api/test')
+      .then((res) => res.json())
+      .then((data) => console.log('fetch data', data));
+  }, []);
 
   return (
     <div className={styles.container}>

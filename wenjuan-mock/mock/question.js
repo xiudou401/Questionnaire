@@ -1,4 +1,5 @@
 const Mock = require('mockjs');
+const getQuestionList = require('./data/getQuestionList');
 
 const Random = Mock.Random;
 
@@ -25,6 +26,19 @@ module.exports = [
         data: {
           id: Random.id(),
           title: Random.title(),
+        },
+      };
+    },
+  },
+  {
+    url: '/api/question',
+    method: 'get',
+    response() {
+      return {
+        errno: 0,
+        data: {
+          list: getQuestionList(),
+          total: 100,
         },
       };
     },
